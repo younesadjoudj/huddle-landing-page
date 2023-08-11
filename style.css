@@ -1,0 +1,331 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+    --clr-primary-Pink: hsl(322, 100%, 66%);
+
+    /* Neutral */
+    --clr-neutral-Very-Pale-Cyan: hsl(193, 100%, 96%);
+    --clr-neutral-Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --clr-neutral-Grayish-Blue: hsl(208, 11%, 55%);
+
+    /* Font family */
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+
+    /* Font weights */
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
+
+/* Css reset */ 
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+*/
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+*/
+button {
+    font: inherit;
+}
+/*
+    7. Avoid text overflows
+*/
+p, h1, h2, h3 {
+    overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+/*
+    9. List styling
+*/    
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* General styling */ 
+
+body {
+    background-color: #fff;
+    min-height: 100vh;
+    font-size: 1.125rem;
+    font-family: var(--ff-open-sans);
+    font-weight: var(--fw-regular);
+}
+
+header {
+    background-color: var(--clr-neutral-Very-Pale-Cyan);
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    background-image: url("images/bg-hero-mobile.svg");
+    block-size: 20% 20%;
+}
+
+header .navbar {   
+    color: var(--clr-neutral-Very-Dark-Cyan);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+}
+
+header .navbar .button {
+    background-color: #fff;
+    font-size: 1rem;
+    text-align: center; 
+    border: 0;
+    border-radius: 12rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+header .navbar .button:hover {
+    color: rgb(46, 145, 145);
+}
+
+header .navbar img {
+    height: 1.5rem;
+}
+
+header h1 {
+    text-wrap:balance;
+    width: 78%;
+    margin: 0 auto;
+    line-height: 1.4;
+    margin-top: 4rem;
+}
+
+header p {
+    color: var(--clr-neutral-Very-Dark-Cyan);
+    font-weight: var(--fw-semi-bold);
+    text-wrap: balance;
+    line-height: 1.625;
+    width: 78%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.btn-pink {
+    background-color: var(--clr-primary-Pink);
+    color:#fff;
+    font-size: 1rem;
+    width: 65%;
+    border: 0;
+    padding: 0.6em 3em;
+    border-radius: 12rem;
+    margin-block: 2rem 4rem;
+    cursor: pointer;
+}
+
+.btn-pink:hover {
+    background-color: hsl(322, 100%, 45%);
+}
+
+header .image-header {
+    width: 75%;
+    margin: 0rem auto;
+    padding-bottom: 4rem;
+}
+
+section {
+    margin: 4rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.4rem;
+}
+
+.illustration {
+    text-align: center;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 12px 2px rgba(34, 60, 80, 0.14);
+    -moz-box-shadow: 0px 2px 12px 2px rgba(34, 60, 80, 0.14);
+    box-shadow: 0px 2px 12px 2px rgba(34, 60, 80, 0.14);
+    border-radius: 1rem;
+    padding: 3.325rem;
+}
+
+.content-illustration h2 {
+    margin-top: 2rem;
+}
+
+.content-illustration p {
+    color: var(--clr-neutral-Grayish-Blue);
+    margin-top: 2rem;
+}
+
+.ready {
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: -4.875rem;
+    margin-top: 4.875rem;
+    -webkit-box-shadow: 0px 2px 12px 2px rgba(34, 60, 80, 0.14);
+    -moz-box-shadow: 0px 2px 12px 2px rgba(34, 60, 80, 0.14);
+    box-shadow: 0px 2px 12px 2px rgba(34, 60, 80, 0.14);
+    border-radius: 1rem;
+    padding: 3rem 1.5rem;
+}
+
+.ready h3 {
+    font-size: 1.4375rem;
+}
+
+.ready .btn-pink {
+    margin-block: 2rem 0;
+}
+
+footer {
+    background-color: var(--clr-neutral-Very-Dark-Cyan);
+    color: #fff;
+    font-weight: var(--fw-regular);
+    padding: 9rem 2rem 4rem 2rem; 
+    display: grid;
+}
+
+footer .contact {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer .contact img {
+    height: 1.4rem;
+    width: 1.3rem;
+}
+
+footer .footer-menu {
+    margin-top: 4rem;
+    font-size: 1.3rem;
+    font-weight: var(--fw-regular)
+}
+
+footer .footer-menu li {
+    margin-bottom: 1.5rem;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icons-social {
+    width: 2.7rem;
+    display:flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (min-width: 900px){
+    header {
+        background-image: url("images/bg-hero-desktop.svg");
+        text-align: left;
+    }
+
+    header .navbar {
+        padding: 2rem 4rem;
+    }
+
+    header .content-headeer {
+        text-align: left;
+    }
+
+    header .split {
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        padding-right: 4rem;
+        gap: 1.3rem;
+    }
+
+    header .btn-pink, header h1, header p {
+        width: auto;
+        margin-left: 4rem;
+    }
+
+    header .image-header {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    section {
+        margin: 6rem 4rem;
+    }
+
+    section .illustration .split {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .ready {
+        width: 60%;
+        margin-bottom: -10rem;
+    }
+
+    footer {
+        padding: 6rem 4rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6rem;
+    }
+    
+    footer .icons-social {
+        margin-top: 4rem;
+        justify-content: flex-start;
+    }
+
+    footer .social-networks {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    header .navbar {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    header h1 {
+        margin-top: 0;
+    }
+}
