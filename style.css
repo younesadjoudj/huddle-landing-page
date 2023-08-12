@@ -84,6 +84,8 @@ body {
     font-weight: var(--fw-regular);
 }
 
+/* Header styling */
+
 header {
     background-color: var(--clr-neutral-Very-Pale-Cyan);
     font-family: var(--ff-poppins);
@@ -93,15 +95,17 @@ header {
     block-size: 20% 20%;
 }
 
-header .navbar {   
+.navbar {   
     color: var(--clr-neutral-Very-Dark-Cyan);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 2rem 1.5rem;
+    gap: 2rem;
 }
 
-header .navbar .button {
+.button {
     background-color: #fff;
     font-size: 1rem;
     text-align: center; 
@@ -111,11 +115,11 @@ header .navbar .button {
     cursor: pointer;
 }
 
-header .navbar .button:hover {
+.button:hover {
     color: rgb(46, 145, 145);
 }
 
-header .navbar img {
+.navbar img {
     height: 1.5rem;
 }
 
@@ -124,7 +128,6 @@ header h1 {
     width: 78%;
     margin: 0 auto;
     line-height: 1.4;
-    margin-top: 4rem;
 }
 
 header p {
@@ -153,11 +156,13 @@ header p {
     background-color: hsl(322, 100%, 45%);
 }
 
-header .image-header {
+.image-header {
     width: 75%;
     margin: 0rem auto;
     padding-bottom: 4rem;
 }
+
+/* Section styling */
 
 section {
     margin: 4rem 2rem 0 2rem;
@@ -207,6 +212,8 @@ section {
     margin-block: 2rem 0;
 }
 
+/* Footer styling */
+
 footer {
     background-color: var(--clr-neutral-Very-Dark-Cyan);
     color: #fff;
@@ -215,24 +222,24 @@ footer {
     display: grid;
 }
 
-footer .contact {
+.contact {
     display: flex;
+    align-items: baseline;
     gap: 1.5rem;
     margin-top: 2rem;
 }
-
-footer .contact img {
-    height: 1.4rem;
-    width: 1.3rem;
+.contact img {
+    height: 1.1rem;
+    width: 1.2rem;
 }
 
-footer .footer-menu {
+.footer-menu {
     margin-top: 4rem;
     font-size: 1.3rem;
     font-weight: var(--fw-regular)
 }
 
-footer .footer-menu li {
+.footer-menu li {
     margin-bottom: 1.5rem;
 }
 
@@ -244,7 +251,6 @@ footer .footer-menu li {
 }
 
 .icons-social {
-    width: 2.7rem;
     display:flex;
     justify-content: center;
     gap: 1rem;
@@ -255,17 +261,33 @@ a {
     color: #fff;
 }
 
+a img {
+    width: 2.5rem;
+}
+
+@media only screen and (min-width: 350px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header h1 {
+         margin-top: 4rem;
+    }
+}
+
 @media only screen and (min-width: 900px){
+    /* Header */
     header {
         background-image: url("images/bg-hero-desktop.svg");
         text-align: left;
     }
 
-    header .navbar {
+    .navbar {
         padding: 2rem 4rem;
     }
 
-    header .content-headeer {
+    .content-header {
         text-align: left;
     }
 
@@ -277,21 +299,22 @@ a {
         gap: 1.3rem;
     }
 
-    header .btn-pink, header h1, header p {
+    header :is(.btn-pink, h1, p) {
         width: auto;
         margin-left: 4rem;
     }
 
-    header .image-header {
+    .image-header {
         width: 100%;
         margin-bottom: 4rem;
     }
 
+    /* Section */
     section {
         margin: 6rem 4rem;
     }
 
-    section .illustration .split {
+    .illustration .split {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -302,30 +325,20 @@ a {
         margin-bottom: -10rem;
     }
 
+    /* Footer */
     footer {
-        padding: 6rem 4rem;
-        grid-template-columns: repeat(4, 1fr);
+        padding: 8rem 4rem;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
         gap: 6rem;
     }
     
-    footer .icons-social {
+    .icons-social {
         margin-top: 4rem;
         justify-content: flex-start;
     }
 
-    footer .social-networks {
+    .social-networks {
         justify-content: space-between;
         align-items: flex-start;
-    }
-}
-
-@media only screen and (max-width: 350px) {
-    header .navbar {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    header h1 {
-        margin-top: 0;
     }
 }
